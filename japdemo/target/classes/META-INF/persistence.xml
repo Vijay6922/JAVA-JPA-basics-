@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	<persistence-unit name="mssqlserver_pubs_ddl" transaction-type="RESOURCE_LOCAL">
+		<!-- Persistence provider -->
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<!--  domain classes -->
+		<class>basics.Sales1</class>
+		<class>basics.titles</class>
+		<class>basics.categories</class>
+		<class>basics.products</class>
+		<class>composition.customers</class>
+		<class>composition.Address</class>
+		<class>composition.ContactInfo</class>
+		<class>composition.house</class>
+		<class>composition.parking</class>
+		<class>composition.officeAddress</class>
+		<class>collections.products</class>
+		<class>collections.orders</class>
+		<class>inheritance.Doctor</class>
+		<class>inheritance.ResidentDoctor</class>
+		<class>inheritance.Consultant</class>
+		<class>manyToOne.Sales</class>
+		<class>manyToOne.listSales</class>
+		<class>manyToOne.listProduct</class>
+		<class>manyToOne.Product</class>
+		<class>manyToOne.Title</class>
+		<class>manyToOne.titleAuthor</class>
+		<class>manyToOne.titles1</class>
+		<class>manyToOne.Publishers</class>
+		
+		
+
+		
+	
+		
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:sqlserver://localhost:1433;database = pubs;user=sa;password=YourStrong@Passw0rd;database= pubs;encrypt=true;trustServerCertificate=true" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="YourStrong@Passw0rd" />
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.SQLServer2012Dialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			
+		</properties>
+	</persistence-unit>
+
+	 
+ 
+
+	 
+
+</persistence>
